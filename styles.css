@@ -286,3 +286,59 @@ a{color:inherit;text-decoration:none} b,strong{font-weight:800} img{max-width:10
   .worry-list{grid-template-columns:1fr}
   .ring{width:140px;height:140px} .ring b{font-size:2.4rem}
 }
+
+/* ============================================================
+   v4 テイスト層（asobu寄せ・WEAVEカラー）
+   ============================================================ */
+/* 吹き出し見出し（eyebrow） */
+.eyebrow{position:relative}
+.eyebrow::after{content:"";position:absolute;left:50%;bottom:-6px;transform:translateX(-50%);width:0;height:0;border:7px solid transparent;border-top-color:rgba(20,136,164,.10);border-bottom:0}
+.eyebrow.light::after{border-top-color:rgba(23,166,196,.16)}
+
+/* 見出しのアンバー・マーカー下線 */
+.h2 .mk{position:relative;z-index:0}
+.h2 .mk::after{content:"";position:absolute;left:-2px;right:-2px;bottom:.06em;height:.34em;background:rgba(244,166,42,.35);border-radius:3px;z-index:-1}
+.h2.white .mk::after{background:rgba(23,166,196,.45)}
+
+/* ドット区切り帯 */
+.dots-div{height:26px;background-image:radial-gradient(rgba(20,136,164,.28) 2.2px,transparent 2.2px);background-size:20px 20px;background-position:center}
+
+/* ヒーロー装飾（丸・リング） */
+.hero{position:relative}
+.deco{position:absolute;z-index:1;pointer-events:none}
+.deco.dot{border-radius:50%;background:var(--amber);box-shadow:0 8px 20px -6px rgba(244,166,42,.6)}
+.deco.ring{border-radius:50%;border:5px solid rgba(23,166,196,.6);background:transparent}
+.deco.d1{width:22px;height:22px;top:20%;left:47%}
+.deco.d2{width:13px;height:13px;top:64%;left:40%}
+.deco.r1{width:54px;height:54px;top:12%;right:34%}
+.deco.r2{width:30px;height:30px;bottom:16%;right:46%}
+
+/* ヒーローsub＝吹き出し化 */
+.hero-sub{display:inline-block;background:var(--teal);color:#fff;font-weight:800;padding:8px 20px;border-radius:100px;position:relative;margin-bottom:16px}
+.hero-sub::after{content:"";position:absolute;left:30px;bottom:-8px;width:0;height:0;border:9px solid transparent;border-top-color:var(--teal);border-bottom:0}
+
+/* 選ばれる理由カード：上にアンバーの帯＋アイコン強化 */
+.rcard{border-top:4px solid var(--amber);position:relative}
+.ric{background:linear-gradient(135deg,rgba(23,166,196,.16),rgba(244,166,42,.14))}
+
+/* 問題カード番号：丸バッジ化 */
+.pnum{width:52px;height:52px;display:grid;place-items:center;border-radius:50%;background:linear-gradient(135deg,var(--teal-2),var(--teal));color:#fff;opacity:1;font-size:1.4rem;box-shadow:0 12px 24px -10px rgba(20,136,164,.6)}
+
+/* カリキュラムを色ブロック帯に */
+.curriculum{background:linear-gradient(180deg,#0B2545,#071C3D);position:relative;overflow:hidden}
+.curriculum::before{content:"";position:absolute;inset:0;background:radial-gradient(700px 360px at 85% 0%,rgba(23,166,196,.18),transparent 60%);z-index:0}
+.curriculum .wrap{position:relative;z-index:2}
+.curriculum .h2{color:#fff} .curriculum .lead{color:#cbd8ea}
+.curriculum .eyebrow{color:#9fe6f6;background:rgba(23,166,196,.16)} .curriculum .eyebrow::after{border-top-color:rgba(23,166,196,.16)}
+.ccard{background:#fff;padding-top:30px}
+.ccard .cnum{position:absolute;left:22px;top:-18px;right:auto;width:46px;height:46px;display:grid;place-items:center;border-radius:50%;background:linear-gradient(135deg,var(--amber),#ffbf57);color:#3a2600;font-size:1.15rem;box-shadow:0 12px 24px -10px rgba(244,166,42,.7)}
+.cur{margin-top:52px}
+
+/* 導入フローの番号を大きめ丸バッジ（据え置き＋影） */
+.fnum{box-shadow:0 12px 24px -10px rgba(20,136,164,.6);font-size:1.3rem}
+
+/* お悩みリストの!アイコンをアンバーに */
+.worry-list li::before{background:var(--amber);color:#3a2600}
+
+/* セクション見出しを少しだけ強く */
+.h2{font-weight:800}
