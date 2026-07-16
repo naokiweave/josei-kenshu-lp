@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>お客様の声セクション — 助成金研修LP</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=M+PLUS+Rounded+1c:wght@700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#071C3D;
+  --navy-2:#0E2A50;
+  --ink:#132340;
+  --ink-2:#41506B;
+  --ink-3:#7A879E;
+  --teal:#1488A4;
+  --teal-2:#17A6C4;
+  --teal-ink:#0C6C84;
+  --bg:#F5FAFC;
+  --white:#FFFFFF;
+  --line:#E4ECF2;
+  --amber:#F4A62A;
+  --shadow:0 26px 60px -30px rgba(7,28,61,.30);
+  --shadow-sm:0 14px 32px -18px rgba(7,28,61,.24);
+  --font:"Noto Sans JP",system-ui,-apple-system,sans-serif;
+  --round:"M PLUS Rounded 1c","Noto Sans JP",sans-serif;
+  --maxw:1200px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{font-size:16.5px;-webkit-text-size-adjust:100%}
+body{font-family:var(--font);background:var(--bg);color:var(--ink);line-height:1.85;font-weight:500;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+b,strong{font-weight:800}
+.round{font-family:var(--round)}
+
+.voice{position:relative;padding-block:clamp(76px,10vw,132px);overflow:hidden}
+.voice::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(1100px 460px at 82% -8%,rgba(20,136,164,.08),transparent 60%),
+  radial-gradient(900px 420px at 8% 108%,rgba(20,136,164,.06),transparent 60%);pointer-events:none}
+.wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding-inline:clamp(20px,5vw,56px);position:relative;z-index:2}
+
+/* 見出し */
+.head{text-align:center;margin-bottom:clamp(40px,6vw,64px)}
+.eyebrow{display:inline-flex;align-items:center;gap:.5em;font-family:var(--round);font-weight:800;font-size:.8rem;letter-spacing:.12em;color:var(--teal);background:rgba(20,136,164,.10);padding:8px 18px;border-radius:100px;margin-bottom:22px}
+.eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--teal)}
+.h2{font-family:var(--round);font-weight:900;font-size:clamp(1.9rem,4.6vw,3.15rem);line-height:1.4;letter-spacing:.01em;color:var(--navy)}
+.h2 .mk{color:var(--teal);position:relative}
+.lead{margin-top:20px;font-size:clamp(1rem,2vw,1.18rem);color:var(--ink-2);line-height:1.9}
+.stat-row{margin-top:30px;display:inline-flex;flex-wrap:wrap;gap:10px 30px;justify-content:center}
+.stat{display:flex;flex-direction:column;align-items:center;line-height:1.2}
+.stat .n{font-family:var(--round);font-weight:900;font-size:clamp(1.8rem,3.4vw,2.5rem);color:var(--navy)}
+.stat .n small{font-size:.55em;font-weight:800}
+.stat .l{font-size:.82rem;color:var(--ink-3);font-weight:700;letter-spacing:.02em}
+.stat .bar{width:1px;align-self:stretch;background:var(--line)}
+
+/* 数字カード（フィーチャー） */
+.feat{display:grid;grid-template-columns:repeat(auto-fit,minmax(272px,1fr));gap:16px;margin-bottom:clamp(30px,4vw,44px)}
+.fcard{background:linear-gradient(180deg,#0B2545,#071C3D);color:#fff;border-radius:22px;padding:26px 26px 24px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.fcard::after{content:"";position:absolute;right:-40px;top:-40px;width:150px;height:150px;border-radius:50%;background:radial-gradient(circle,rgba(23,166,196,.5),transparent 68%);opacity:.5}
+.fcard .tag{display:inline-block;font-family:var(--round);font-weight:800;font-size:.72rem;letter-spacing:.03em;color:#9fe6f6;background:rgba(23,166,196,.16);border:1px solid rgba(23,166,196,.32);padding:5px 12px;border-radius:100px;margin-bottom:16px}
+.fcard .metric{font-family:var(--round);font-weight:900;font-size:clamp(1.32rem,2.3vw,1.72rem);line-height:1.35;color:#fff;position:relative;z-index:2}
+.fcard .metric em{font-style:normal;color:var(--amber)}
+.fcard .who{margin-top:14px;font-size:.86rem;color:#b9c6dc;font-weight:700;position:relative;z-index:2}
+
+/* 流れるレーン */
+.marquee{display:flex;flex-direction:column;gap:16px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.lane{display:flex;gap:16px;width:max-content;will-change:transform}
+.lane.l2r{animation:slideA 64s linear infinite}
+.lane.r2l{animation:slideB 72s linear infinite}
+.lane.l2r.slow{animation-duration:82s}
+.marquee:hover .lane{animation-play-state:paused}
+@keyframes slideA{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes slideB{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+
+.card{flex:0 0 auto;width:340px;background:var(--white);border:1px solid var(--line);border-radius:20px;padding:22px 22px 20px;box-shadow:var(--shadow-sm);transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s}
+.card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.card .top{display:flex;align-items:center;gap:9px;margin-bottom:13px}
+.card .tag{font-family:var(--round);font-weight:800;font-size:.72rem;letter-spacing:.02em;color:var(--teal-ink);background:rgba(20,136,164,.10);padding:5px 12px;border-radius:100px;white-space:nowrap}
+.card .role{font-size:.78rem;color:var(--ink-3);font-weight:700;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.card .quote{font-size:.94rem;line-height:1.8;color:var(--ink);font-weight:500}
+.card .quote::before{content:"“";font-family:var(--round);font-weight:900;color:var(--teal);font-size:1.5em;line-height:0;margin-right:2px;vertical-align:-.28em}
+.card .m{margin-top:13px;display:inline-flex;align-items:center;gap:7px;font-family:var(--round);font-weight:800;font-size:.82rem;color:var(--navy);background:rgba(244,166,42,.14);border:1px solid rgba(244,166,42,.34);padding:6px 12px;border-radius:10px;line-height:1.4}
+.card .m::before{content:"▲";color:var(--amber);font-size:.72em;transform:rotate(0)}
+
+.note{text-align:center;margin-top:30px;font-size:.82rem;color:var(--ink-3)}
+
+@media(max-width:640px){
+  .card{width:280px}
+  .fcard .metric{font-size:1.28rem}
+}
+</style>
+</head>
+<body>
+<section class="voice">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow round">VOICE</span>
+      <h2 class="h2">現場が、<span class="mk">AIを使いこなし始めた</span>。</h2>
+      <p class="lead">建設・製造・福祉・電気・アパレル・食品まで。<br>業種も職種も関係なく、受講した方が実務でAIを動かしています。</p>
+      <div class="stat-row">
+        <div class="stat"><span class="n">40<small>+</small></span><span class="l">現場の声</span></div>
+        <div class="bar"></div>
+        <div class="stat"><span class="n">9<small>業種</small></span><span class="l">導入業種</span></div>
+        <div class="bar"></div>
+        <div class="stat"><span class="n">最大<small>75%</small></span><span class="l">助成金でOFF</span></div>
+      </div>
+    </div>
+
+    <div class="feat" id="feat"></div>
+
+    <div class="marquee" id="marquee">
+      <div class="lane l2r" id="lane1"></div>
+      <div class="lane r2l" id="lane2"></div>
+      <div class="lane l2r slow" id="lane3"></div>
+    </div>
+
+    <p class="note">※受講後アンケートより。個人・企業が特定される情報は伏せています。</p>
+  </div>
+</section>
+
+<script>
+const DATA = [
+  {"業種":"電気工事業","職種":"事務・IT管理","声":"紙の書類の文字起こし用に専用AIを作った。1ページ10〜60分かかっていた作業が、今は確認だけで済んでいる。AIを対話と育成で実務を共に進めるパートナーとして捉える視点を得たのが最大の収穫","metric":"文字起こし 10〜60分→確認のみ"},
+  {"業種":"電気工事業","職種":"専務・経営","声":"AIの基本から学べた。今では議事録作成がほぼ自動でできている","metric":"議事録作成をほぼ自動化"},
+  {"業種":"電気工事業","職種":"設計・管理","声":"繰り返しの業務を効率化できそうだと実感できた。社内書類や処理の効率化に活かしたい","metric":""},
+  {"業種":"電気工事業","職種":"施工管理","声":"NotebookLMが非常に便利だと感じた。第1回のあと、皆が使うようになった","metric":""},
+  {"業種":"アパレル・雑貨卸／百貨店","職種":"EC開発・運営","声":"プロンプトのためのプロンプトやGPTsの作り方を知れた。コラムのサムネ作成が60分から6分になった","metric":"サムネ作成 60分→6分"},
+  {"業種":"アパレル・雑貨卸／百貨店","職種":"生産管理","声":"GPTsの作り方が分かった。20分かかっていた作業が5分に短縮できると計算している","metric":"作業 20分→5分"},
+  {"業種":"アパレル・雑貨卸／百貨店","職種":"直営店運営（営業）","声":"実践的にワークを進めながら学べたので使い方が身についた。自分の仕事に置き換えてプロンプトを作るハードルがとても低くなった","metric":""},
+  {"業種":"アパレル・雑貨卸／百貨店","職種":"EC運営統括","声":"実際の業務で使えるGPTsを作れた。チームで使えるGPTsを大量生産して、効率化と時短で残業を減らせる未来が見えた","metric":""},
+  {"業種":"アパレル・雑貨卸／百貨店","職種":"商品チーム・MD","声":"プロンプトの重要性がよく分かった。資料分析や資料の変換で3〜5時間ほど削減できている","metric":"資料分析・変換で3〜5時間削減"},
+  {"業種":"アパレル・雑貨卸／百貨店","職種":"総務・人事","声":"段階を踏んで教わり、テキストも分かりやすく復習しやすかった。資料作成で10〜15時間、面談記録の文字起こしと要点まとめは1件30分ほど削減できている","metric":"資料作成で10〜15時間削減"},
+  {"業種":"アパレル・雑貨卸／百貨店","職種":"戦略事業部・開発営業","声":"日々の業務で苦戦することも、解決のための手段が広がった。資料作成や突合作業に活かせている","metric":""},
+  {"業種":"建設・インフラ整備業","職種":"総務・経理（契約管理）","声":"知らなかったAIの特徴を知ることができた。契約書の作成業務が一番削減でき、1回あたり3時間ほど短縮できている","metric":"契約書作成を1回3時間削減"},
+  {"業種":"建設・インフラ整備業","職種":"販売・広報","声":"教え方が分かりやすかった。チラシ作成の時間が2日から半日になった","metric":"チラシ作成 2日→半日"},
+  {"業種":"建設・インフラ整備業","職種":"法面防災・現場職人","声":"自分の知らない知識が学べて良かった。マニュアル作成にかかる時間が大幅に変わった","metric":"マニュアル作成時間を大幅削減"},
+  {"業種":"建設・インフラ整備業","職種":"エンジニア・3DCAD設計","声":"自分の業務に活かせるAIを作るためのプロンプトの作成方法が分かりやすかった","metric":""},
+  {"業種":"建設・インフラ整備業","職種":"設計","声":"いろいろなケースを自分で操作しながら進められた。プレゼン資料の作成なら3分の1程度の時間でできそう","metric":"プレゼン資料作成を約1/3に"},
+  {"業種":"建設・インフラ整備業","職種":"技能講習センター事務・講師","声":"ゴール設定の重要性が理解できた。AIに質問させて成果物の精度を上げる発想や、プロンプト作成をAIに依頼する発想が斬新だった","metric":""},
+  {"業種":"厨房設備（販売・サービス）","職種":"事務","声":"各自の記憶やフォルダにしかなかったマニュアルを見やすく作成でき、NotebookLMに入れて質問もできる。マニュアルやブログ記事の作成が1〜2時間から10分になった","metric":"マニュアル・記事作成 1〜2時間→10分"},
+  {"業種":"厨房設備（販売・サービス）","職種":"事務（請求・メール対応）","声":"中途半端な知識しかなかったが理解を深められた。メール作成が5分から1分になったようなもの","metric":"メール作成 5分→1分"},
+  {"業種":"厨房設備（販売・サービス）","職種":"営業","声":"議事録の作成が楽になり、簡単なものなら2〜3時間の削減ができた","metric":"議事録作成で2〜3時間削減"},
+  {"業種":"厨房設備（販売・サービス）","職種":"設計","声":"AIの活用方法を、参加者みんなで考えられるようになった","metric":""},
+  {"業種":"電気通信工事・インフラ保守","職種":"企画開発（技術部）","声":"情報収集用の壁打ちAIを作れた。議事録作成や出張報告書のドラフト作成で、1件あたり2〜8時間ほど削減できている","metric":"議事録・報告書で1件2〜8時間削減"},
+  {"業種":"電気通信工事・インフラ保守","職種":"保守点検・コンサル支援","声":"実際に使う場面が多く分かりやすかった。従来は会議後2時間かけて文章化していた議事録が、修正込みでも1時間弱で完成した","metric":"議事録 約2時間→1時間弱"},
+  {"業種":"電気通信工事・インフラ保守","職種":"工事部・施工管理","声":"たくさんのAIツールに触れられた。仕様書の比較などでは従来より5割程度作業を減らせていると感じる","metric":"仕様書比較などを約5割削減"},
+  {"業種":"電気通信工事・インフラ保守","職種":"通信施設の保守・工事（現場）","声":"知識がほとんどない状態から順を追って学べた。現場で通信機器の仕様を知りたいとき即座に情報収集できるようになった","metric":"現場での情報収集を約15分短縮"},
+  {"業種":"電気通信工事・インフラ保守","職種":"岡山事業所・施工管理","声":"AIの導入としてすごく良かった。ツール類の作成で大幅に時間短縮でき、1か月かかっていたものが1週間になった","metric":"ツール作成 1か月→1週間"},
+  {"業種":"障害福祉サービス","職種":"SNS発信・シフト管理","声":"第6回のGemは明日から活用できそう。アンケート作成で80%くらいの時短ができた","metric":"アンケート作成を約80%時短"},
+  {"業種":"障害福祉サービス","職種":"サービス管理責任者","声":"毎時間ごとに新しいトピックがあり興味深く学べた。モニタリング報告書や個別支援計画の作成などで、体感6割くらい削減できている","metric":"報告書・支援計画を体感6割削減"},
+  {"業種":"障害福祉サービス","職種":"支援員・事務","声":"生成AIで画像や文章の編集ができ、いろいろな種類のAIの使い方を学べた。商品の値札とポップ制作で30分くらい短縮できた","metric":"値札・ポップ制作を約30分短縮"},
+  {"業種":"障害福祉サービス","職種":"サービス管理責任者（管理）","声":"挨拶状の作成、会議録、資産計画書の作成などに活用でき、非常に効果を感じている","metric":""},
+  {"業種":"障害福祉サービス","職種":"福祉事業所・サービス管理責任者","声":"毎時間ごとに新しいトピックがあり興味深く学べた。業務への活用イメージがついた","metric":""},
+  {"業種":"食品メーカー（営業）","職種":"大阪支店・営業","声":"意外と敷居が低く、文系頭の自分でもできそうだと感じた。資料やチラシなどを時短で作れそうで、大変有意義な時間だった","metric":""},
+  {"業種":"食品メーカー（営業）","職種":"名古屋支店・家庭用営業","声":"導入研修としては十分な内容だった。AI嫌いの社員がいる中でも、使わず嫌いを使う側に誘導できる良い機会だと感じた","metric":""},
+  {"業種":"食品メーカー（営業）","職種":"東京支店・業務課","声":"説明が分かりやすく、実際の作業手順も見ながら操作できたのがとても良かった。自分の仕事にどう役立てられるか試してみたい","metric":""},
+  {"業種":"美容・サービス業（人事・採用）","職種":"専務取締役（人事）","声":"面接記録票の作成、面接官ロープレやマニュアル、外国人向け資料の翻訳・画像化、法改正の要約、店舗掲示物、議事録など、活用イメージが一気に広がった","metric":""},
+  {"業種":"美容・サービス業（人事・採用）","職種":"人事管理・副部長","声":"基本概念から具体的な活用事例まで整理して学べて理解が深まった。入社者・退職者データから退職理由や傾向を分析するなど、人事領域での活用可能性を大きく感じた","metric":""},
+  {"業種":"美容・サービス業（人事・採用）","職種":"HRスペシャリスト","声":"GPTsの存在を知らなかったので勉強になった。GPTsを使った案内作成や情報検索に使えそう","metric":""},
+  {"業種":"農業・食品製造","職種":"生産センター・管理職","声":"エアーコンプレッサーの動画を音声に変換し、その音からAIに機器の状態を診断させたところ、詳細な診断と今後起こりうるトラブルへの言及まで得られた","metric":"設備の状態診断をAIで実現"},
+  {"業種":"農業・食品製造","職種":"物流センター・管理職","声":"音声データを文字起こしできる機能が、実業務に活かせると感じた","metric":""},
+  {"業種":"農業・食品製造","職種":"営業所・リーダー","声":"AIと音声で会話できる点や、画像から文字を読み取れる点を知り、単純作業の業務時間の縮小につながると思った","metric":""}
+];
+
+// フィーチャー：数字が強い声を上位6件
+const featured = DATA.filter(d=>d.metric).slice(0,6);
+document.getElementById('feat').innerHTML = featured.map(d=>`
+  <div class="fcard">
+    <span class="tag round">${d.業種}</span>
+    <div class="metric round"><em>${d.metric}</em></div>
+    <div class="who">${d.職種}</div>
+  </div>`).join('');
+
+// カードHTML
+function card(d){
+  return `<div class="card">
+    <div class="top"><span class="tag round">${d.業種}</span><span class="role">${d.職種}</span></div>
+    <p class="quote">${d.声}</p>
+    ${d.metric?`<span class="m round">${d.metric}</span>`:''}
+  </div>`;
+}
+// 3レーンに分配（順番を散らす）
+const lanes=[[],[],[]];
+DATA.forEach((d,i)=>lanes[i%3].push(d));
+// シームレスループのため各レーン2周分
+['lane1','lane2','lane3'].forEach((id,idx)=>{
+  const html = lanes[idx].map(card).join('');
+  document.getElementById(id).innerHTML = html + html;
+});
+</script>
+</body>
+</html>

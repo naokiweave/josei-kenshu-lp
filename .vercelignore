@@ -1,0 +1,6 @@
+rec/
+rec_full/
+*.webm
+*.mp4
+node_modules/
+record*.js
