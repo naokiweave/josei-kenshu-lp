@@ -415,3 +415,87 @@ a{color:inherit;text-decoration:none} b,strong{font-weight:800} img{max-width:10
   linear-gradient(180deg,rgba(7,28,61,.82),rgba(7,28,61,.92)),
   url("assets/img/seminar.webp") center/cover no-repeat,
   radial-gradient(800px 400px at 82% 0%,rgba(23,166,196,.22),transparent 60%)}
+
+/* ============================================================
+   v12 カラフル刷新 — AI社員LP(hakoiri)/Yoom 踏襲
+   白基調 × ティール/パープル/イエロー/ピンク/グリーンの差し色。青一色をやめ感情に響く配色へ
+   ============================================================ */
+:root{
+  --ink:#111B2E; --ink-2:#3A4658; --ink-3:#69748A;
+  --bg:#F3F5F9; --line:#E6EAF1;
+  --yellow:#FFD24C; --amber:#F4A62A; --green:#2CC08A; --pink:#FF6FA5; --purple:#6C5CE7;
+}
+body{color:var(--ink);background:var(--bg)}
+.h2{color:var(--ink)} .mk{color:var(--teal)}
+.h2 .mk::after{background:rgba(255,210,76,.55)}
+
+/* eyebrow → 白チップ（AI社員LP準拠） */
+.eyebrow{display:inline-block;font-family:var(--round);font-weight:700;font-size:.82rem;letter-spacing:.04em;color:var(--teal-ink);background:#fff;border:1px solid var(--line);padding:6px 16px;border-radius:100px;margin-bottom:16px;box-shadow:var(--shadow-sm)}
+.eyebrow.light{color:var(--teal-ink);background:#fff;border-color:rgba(255,255,255,.6)}
+
+/* ===== ヒーロー：白基調＋カラフルなグラデ玉＋紙吹雪 ===== */
+.hero{background:var(--bg)}
+.hero-bg{background:
+  radial-gradient(560px 560px at 90% -12%, rgba(66,211,230,.55), transparent 60%),
+  radial-gradient(480px 480px at 2% 112%, rgba(142,123,242,.42), transparent 60%),
+  radial-gradient(400px 400px at 58% 46%, rgba(255,216,102,.30), transparent 62%),
+  radial-gradient(360px 360px at 30% 6%, rgba(255,111,165,.16), transparent 60%),
+  var(--bg)}
+.hero-bg::after{background-image:radial-gradient(rgba(17,27,46,.05) 1.4px,transparent 1.4px);background-size:26px 26px;opacity:1;
+  -webkit-mask-image:radial-gradient(72% 60% at 50% 42%,#000,transparent 76%);mask-image:radial-gradient(72% 60% at 50% 42%,#000,transparent 76%)}
+.hero-sub{color:var(--teal-ink)}
+.hero-h1{color:var(--ink)} .hero-h1 .mk{color:var(--teal)}
+.hero-lead{color:var(--ink-2)}
+.btn-primary{background:var(--ink);box-shadow:0 14px 30px -12px rgba(17,27,46,.5)}
+/* 紙吹雪シェイプ */
+.cf{position:absolute;z-index:1;pointer-events:none}
+.cf1{width:20px;height:20px;border-radius:50%;background:var(--yellow);top:22%;left:44%;box-shadow:0 8px 18px -6px rgba(255,210,76,.6)}
+.cf2{width:14px;height:14px;border-radius:50%;background:var(--pink);top:66%;left:38%}
+.cf3{width:44px;height:44px;border-radius:14px;border:5px solid var(--teal-2);background:transparent;transform:rotate(18deg);top:12%;right:30%}
+.cf4{width:26px;height:26px;border-radius:8px;background:var(--purple);opacity:.85;transform:rotate(-16deg);bottom:14%;right:40%}
+.cf5{width:12px;height:12px;border-radius:50%;background:var(--teal-2);top:40%;left:52%}
+
+/* ===== 実績：ティール→パープルの鮮やか色ブロック（草冠は金のまま） ===== */
+.stats{background:linear-gradient(135deg,#17A8C6,#4C7BE0 55%,#6C5CE7)}
+.stats-bg{background:
+  radial-gradient(620px 380px at 84% -6%, rgba(255,255,255,.16), transparent 60%),
+  radial-gradient(520px 340px at 6% 106%, rgba(255,216,102,.14), transparent 60%)}
+.badge-c span{color:rgba(255,255,255,.9)}
+
+/* ===== お悩み：そのままティール（色ブロック）。強調をイエローに ===== */
+.worry-cta b{color:var(--ink);background:var(--yellow)}
+.worry-list li::before{background:var(--yellow);color:#3a2600}
+
+/* ===== カリキュラム：パープル色ブロック（Yoom準拠） ===== */
+.curriculum{background:linear-gradient(160deg,#6C5CE7,#5a49d4)}
+.curriculum::before{background:radial-gradient(700px 360px at 85% 0%,rgba(255,255,255,.12),transparent 60%)}
+.ccard .cnum{background:linear-gradient(135deg,var(--yellow),#ffc02e);color:#3a2600}
+
+/* ===== 助成金（詳細）：ティール色ブロックに ===== */
+.subsidy{background:linear-gradient(160deg,#128AA6,#0C6C84)}
+.sub-bg{background:radial-gradient(760px 400px at 86% 4%,rgba(255,255,255,.12),transparent 60%),radial-gradient(600px 360px at 6% 98%,rgba(255,216,102,.14),transparent 60%)}
+
+/* ===== 最終CTA：ティール→パープル→ピンクの鮮やかグラデ ===== */
+.cta-box{background:linear-gradient(120deg,#17A8C6,#6C5CE7 58%,#FF6FA5)}
+.cta-box::before{background:radial-gradient(circle,rgba(255,255,255,.22),transparent 66%)}
+
+/* ===== 問題カード番号：色を巡回（青一色にしない） ===== */
+.grid3 .pcard:nth-child(1) .pnum{background:linear-gradient(135deg,var(--teal-2),var(--teal))}
+.grid3 .pcard:nth-child(2) .pnum{background:linear-gradient(135deg,#8E7BF2,var(--purple))}
+.grid3 .pcard:nth-child(3) .pnum{background:linear-gradient(135deg,#FF83B2,var(--pink))}
+
+/* ===== 導入フロー番号：色を巡回 ===== */
+.flow-track .fstep:nth-child(1) .fnum{background:linear-gradient(135deg,var(--teal-2),var(--teal))}
+.flow-track .fstep:nth-child(2) .fnum{background:linear-gradient(135deg,#8E7BF2,var(--purple))}
+.flow-track .fstep:nth-child(3) .fnum{background:linear-gradient(135deg,var(--yellow),#ffc02e);color:#3a2600}
+.flow-track .fstep:nth-child(4) .fnum{background:linear-gradient(135deg,#38CE9A,var(--green))}
+.flow-track .fstep:nth-child(5) .fnum{background:linear-gradient(135deg,#FF83B2,var(--pink))}
+
+/* ===== 選ばれる理由：カード上辺をカラフルに巡回 ===== */
+.grid4 .rcard{border-top:4px solid var(--teal)}
+.grid4 .rcard:nth-child(2){border-top-color:var(--purple)}
+.grid4 .rcard:nth-child(3){border-top-color:var(--green)}
+.grid4 .rcard:nth-child(4){border-top-color:var(--amber)}
+
+/* ドット区切りを淡色に */
+.dots-div{background-image:radial-gradient(rgba(108,92,231,.22) 2.2px,transparent 2.2px)}
