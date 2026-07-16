@@ -21,9 +21,9 @@ a{color:inherit;text-decoration:none} b,strong{font-weight:800} img{max-width:10
 .reveal.in{opacity:1;transform:none}
 
 .section{padding-block:clamp(72px,10vw,128px)}
-.eyebrow{display:inline-flex;align-items:center;gap:.5em;font-family:var(--round);font-weight:800;font-size:.78rem;letter-spacing:.12em;color:var(--teal);background:rgba(20,136,164,.10);padding:8px 18px;border-radius:100px;margin-bottom:20px}
-.eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--teal)}
-.eyebrow.light{color:#9fe6f6;background:rgba(23,166,196,.16)}
+.eyebrow{display:inline-flex;align-items:center;gap:.6em;font-family:var(--round);font-weight:700;font-size:.8rem;letter-spacing:.14em;color:var(--teal);background:none;padding:0;border-radius:0;margin-bottom:14px}
+.eyebrow::before{content:"";width:18px;height:1px;border-radius:0;background:currentColor;opacity:.75}
+.eyebrow.light{color:#7fd6ea;background:none}
 .h2{font-family:var(--round);font-weight:700;font-size:clamp(1.85rem,4.4vw,3.05rem);line-height:1.44;letter-spacing:.005em;color:var(--navy)}
 .h2.white{color:#fff} .mk{color:var(--teal)} .mk-amber{color:var(--amber)}
 .lead{margin-top:18px;font-size:clamp(1rem,2vw,1.16rem);color:var(--ink-2);line-height:1.95}
@@ -232,7 +232,7 @@ a{color:inherit;text-decoration:none} b,strong{font-weight:800} img{max-width:10
 @media(max-width:600px){
   .grid3,.grid4,.story-track,.cur,.flow-track,.sub-grid,.sim-note,.pt-row{grid-template-columns:1fr}
   .sp{display:inline} .card{width:280px} .pt-row{gap:4px;text-align:left} .pt-row b{text-align:left}
-  .hero-trust{gap:12px}
+  .hero-cta{gap:12px} .hero-cta .btn{width:100%}
 }
 
 /* ============ ロゴ帯 ============ */
@@ -248,12 +248,35 @@ a{color:inherit;text-decoration:none} b,strong{font-weight:800} img{max-width:10
 .stats-bg{position:absolute;inset:0;background:radial-gradient(800px 400px at 82% 0%,rgba(23,166,196,.22),transparent 60%),radial-gradient(600px 340px at 8% 100%,rgba(244,166,42,.10),transparent 60%);z-index:0}
 .stats .wrap{position:relative;z-index:2}
 .badges{margin-top:48px;display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.badges.b2{grid-template-columns:repeat(2,1fr);gap:clamp(30px,6vw,80px);max-width:720px;margin-inline:auto}
 .badge-c{display:flex;flex-direction:column;align-items:center;gap:16px}
 .ring{width:170px;height:170px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 50% 40%,rgba(23,166,196,.16),rgba(7,28,61,.2));border:3px solid rgba(23,166,196,.45);box-shadow:inset 0 0 40px -10px rgba(23,166,196,.4),0 20px 40px -20px rgba(0,0,0,.5);position:relative}
 .ring::before{content:"";position:absolute;inset:-3px;border-radius:50%;border:3px solid transparent;border-top-color:var(--amber);border-right-color:var(--amber);transform:rotate(-45deg)}
 .ring b{font-family:var(--round);font-weight:800;color:#fff;font-size:3rem;line-height:1}
 .ring b small{font-size:.35em;font-weight:800;color:#9fe6f6;margin-left:2px}
 .badge-c span{color:#c6d4e8;font-weight:700;font-size:.98rem}
+
+/* ============ 助成金訴求（ファーストビュー直下） ============ */
+.save{background:#fff;border-bottom:1px solid var(--line);padding-block:clamp(48px,7vw,84px)}
+.save-in{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,5vw,64px);align-items:center}
+.save-eyebrow{display:inline-flex;align-items:center;gap:.6em;font-weight:700;font-size:.82rem;letter-spacing:.06em;color:var(--teal);margin-bottom:14px}
+.save-eyebrow::before{content:"";width:18px;height:1px;background:currentColor;opacity:.75}
+.save-h{font-family:var(--round);font-weight:800;font-size:clamp(1.7rem,3.8vw,2.6rem);line-height:1.4;color:var(--navy)}
+.save-mk{color:var(--amber)}
+.save-lead{margin-top:16px;margin-bottom:26px;color:var(--ink-2);font-size:clamp(1rem,1.8vw,1.1rem);line-height:1.95;max-width:32em}
+/* 右：75%OFFの図 */
+.save-fig{background:linear-gradient(180deg,#fff,var(--bg));border:1px solid var(--line);border-radius:16px;padding:clamp(24px,3vw,34px);box-shadow:var(--shadow-sm);display:flex;flex-direction:column;gap:22px}
+.save-num{display:flex;align-items:baseline;gap:12px}
+.save-num b{font-family:var(--round);font-weight:800;font-size:clamp(3.4rem,7vw,5rem);color:var(--amber);line-height:1}
+.save-num b small{font-size:.34em;font-weight:800}
+.save-num span{font-family:var(--round);font-weight:800;font-size:1.1rem;color:var(--navy)}
+.save-bar{display:flex;flex-direction:column;gap:12px}
+.sb-row{display:flex;align-items:center;gap:12px;font-size:.86rem;font-weight:700;color:var(--ink-2)}
+.sb-lab{flex:0 0 8.2em}
+.sb-full{flex:1;height:18px;border-radius:100px;background:#c3cfe0}
+.sb-cut{flex:0 0 25%;height:18px;border-radius:100px;background:linear-gradient(90deg,var(--amber),#ffbf57)}
+.sb-row em{font-style:normal;font-family:var(--round);font-weight:800;color:var(--amber);font-size:.82rem}
+@media(max-width:900px){.save-in{grid-template-columns:1fr}}
 
 /* ============ お悩みチェックリスト ============ */
 .worry{background:var(--bg)}
@@ -284,16 +307,15 @@ a{color:inherit;text-decoration:none} b,strong{font-weight:800} img{max-width:10
 }
 @media(max-width:600px){
   .worry-list{grid-template-columns:1fr}
-  .ring{width:140px;height:140px} .ring b{font-size:2.4rem}
+  .ring{width:132px;height:132px} .ring b{font-size:2.15rem}
+  .badges.b2{grid-template-columns:1fr;max-width:280px;gap:24px}
 }
 
 /* ============================================================
    v4 テイスト層（asobu寄せ・WEAVEカラー）
    ============================================================ */
-/* 吹き出し見出し（eyebrow） */
-.eyebrow{position:relative}
-.eyebrow::after{content:"";position:absolute;left:50%;bottom:-6px;transform:translateX(-50%);width:0;height:0;border:7px solid transparent;border-top-color:rgba(20,136,164,.10);border-bottom:0}
-.eyebrow.light::after{border-top-color:rgba(23,166,196,.16)}
+/* eyebrow：吹き出し装飾は撤去し、控えめな補助ラベルに */
+.eyebrow::after{content:none}
 
 /* 見出しのアンバー・マーカー下線 */
 .h2 .mk{position:relative;z-index:0}
@@ -313,9 +335,9 @@ a{color:inherit;text-decoration:none} b,strong{font-weight:800} img{max-width:10
 .deco.r1{width:54px;height:54px;top:12%;right:34%}
 .deco.r2{width:30px;height:30px;bottom:16%;right:46%}
 
-/* ヒーローsub＝吹き出し化 */
-.hero-sub{display:inline-block;background:var(--teal);color:#fff;font-weight:800;padding:8px 20px;border-radius:100px;position:relative;margin-bottom:16px}
-.hero-sub::after{content:"";position:absolute;left:30px;bottom:-8px;width:0;height:0;border:9px solid transparent;border-top-color:var(--teal);border-bottom:0}
+/* ヒーローsub＝吹き出しをやめ、通常コピーに */
+.hero-sub{display:inline-block;background:none;color:#9fe6f6;font-weight:700;padding:0;border-radius:0;position:relative;margin-bottom:10px;font-size:1.02rem;letter-spacing:.02em}
+.hero-sub::after{content:none}
 
 /* 選ばれる理由カード：上にアンバーの帯＋アイコン強化 */
 .rcard{border-top:4px solid var(--amber);position:relative}
@@ -329,7 +351,7 @@ a{color:inherit;text-decoration:none} b,strong{font-weight:800} img{max-width:10
 .curriculum::before{content:"";position:absolute;inset:0;background:radial-gradient(700px 360px at 85% 0%,rgba(23,166,196,.18),transparent 60%);z-index:0}
 .curriculum .wrap{position:relative;z-index:2}
 .curriculum .h2{color:#fff} .curriculum .lead{color:#cbd8ea}
-.curriculum .eyebrow{color:#9fe6f6;background:rgba(23,166,196,.16)} .curriculum .eyebrow::after{border-top-color:rgba(23,166,196,.16)}
+.curriculum .eyebrow{color:#9fe6f6;background:none}
 .ccard{background:#fff;padding-top:30px}
 .ccard .cnum{position:absolute;left:22px;top:-18px;right:auto;width:46px;height:46px;display:grid;place-items:center;border-radius:50%;background:linear-gradient(135deg,var(--amber),#ffbf57);color:#3a2600;font-size:1.15rem;box-shadow:0 12px 24px -10px rgba(244,166,42,.7)}
 .cur{margin-top:52px}
@@ -347,9 +369,8 @@ a{color:inherit;text-decoration:none} b,strong{font-weight:800} img{max-width:10
    v5 色ブロックのリズム（asobu寄せ・見本）
    ============================================================ */
 .worry{background:linear-gradient(180deg,var(--teal),var(--teal-ink));position:relative;overflow:hidden}
-.worry .eyebrow{color:#fff;background:rgba(255,255,255,.2)}
+.worry .eyebrow{color:#fff;background:none}
 .worry .eyebrow::before{background:#fff}
-.worry .eyebrow::after{border-top-color:rgba(255,255,255,.2)}
 .worry .h2{color:#fff}
 .worry .h2 .mk{color:#fff}
 .worry .h2 .mk::after{background:rgba(255,255,255,.28)}
