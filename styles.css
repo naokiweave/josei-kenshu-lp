@@ -342,3 +342,16 @@ a{color:inherit;text-decoration:none} b,strong{font-weight:800} img{max-width:10
 
 /* セクション見出しを少しだけ強く */
 .h2{font-weight:800}
+
+/* ============================================================
+   v5 色ブロックのリズム（asobu寄せ・見本）
+   ============================================================ */
+.worry{background:linear-gradient(180deg,var(--teal),var(--teal-ink));position:relative;overflow:hidden}
+.worry .eyebrow{color:#fff;background:rgba(255,255,255,.2)}
+.worry .eyebrow::before{background:#fff}
+.worry .eyebrow::after{border-top-color:rgba(255,255,255,.2)}
+.worry .h2{color:#fff}
+.worry .h2 .mk{color:#fff}
+.worry .h2 .mk::after{background:rgba(255,255,255,.28)}
+.worry-cta{color:#fff}
+.worry-cta b{color:var(--navy);background:#fff;padding:2px 10px;border-radius:6px}
