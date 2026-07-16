@@ -59,7 +59,7 @@ a{color:inherit;text-decoration:none} b,strong{font-weight:800} img{max-width:10
 .hero-in{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(28px,4vw,56px);align-items:center}
 .badge{display:inline-block;background:linear-gradient(120deg,var(--amber),#ffbf57);color:#3a2600;font-weight:800;font-size:.85rem;padding:8px 18px;border-radius:100px;margin-bottom:22px;box-shadow:0 10px 24px -10px rgba(244,166,42,.7)}
 .hero-sub{color:#9fe6f6;font-weight:800;font-size:1.05rem;margin-bottom:8px}
-.hero-h1{color:#fff;font-weight:800;font-size:clamp(2.6rem,6vw,4.5rem);line-height:1.18;letter-spacing:.01em}
+.hero-h1{color:#fff;font-weight:700;font-size:clamp(2.6rem,6vw,4.5rem);line-height:1.18;letter-spacing:.01em}
 .hero-h1 .mk{color:#4fd0ea}
 .hero-lead{margin-top:22px;color:#c6d4e8;font-size:clamp(1rem,1.7vw,1.15rem);line-height:1.95;max-width:34em}
 .hero-cta{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap}
@@ -83,7 +83,7 @@ a{color:inherit;text-decoration:none} b,strong{font-weight:800} img{max-width:10
 .grid4{margin-top:44px;display:grid;grid-template-columns:repeat(4,1fr);gap:18px;text-align:left}
 .pcard{background:#fff;border:1px solid var(--line);border-radius:13px;padding:30px 26px;box-shadow:var(--shadow-sm)}
 .pnum{display:block;font-weight:800;font-size:2rem;color:var(--teal);opacity:.85;margin-bottom:10px}
-.pcard h3{font-family:var(--round);font-weight:800;font-size:1.24rem;color:var(--navy);line-height:1.5;margin-bottom:12px}
+.pcard h3{font-family:var(--round);font-weight:700;font-size:1.24rem;color:var(--navy);line-height:1.5;margin-bottom:12px}
 .pcard p{color:var(--ink-2);font-size:.95rem}
 
 /* 3. ストーリー */
@@ -91,7 +91,7 @@ a{color:inherit;text-decoration:none} b,strong{font-weight:800} img{max-width:10
 .story-track{margin-top:44px;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 .scene{background:#fff;border:1px solid var(--line);border-radius:13px;padding:24px;box-shadow:var(--shadow-sm);position:relative}
 .stag{display:inline-block;font-weight:800;font-size:.74rem;letter-spacing:.06em;color:#fff;background:var(--navy);padding:5px 12px;border-radius:100px;margin-bottom:14px}
-.scene h3{font-family:var(--round);font-weight:800;color:var(--navy);font-size:1.16rem;margin-bottom:10px}
+.scene h3{font-family:var(--round);font-weight:700;color:var(--navy);font-size:1.16rem;margin-bottom:10px}
 .scene p{color:var(--ink-2);font-size:.9rem;line-height:1.8;min-height:9.5em}
 .sk{display:inline-block;margin-top:8px;font-weight:800;font-size:.78rem;padding:6px 12px;border-radius:9px}
 .sk.bad{color:#b4443a;background:rgba(203,68,58,.10)} .sk.mid{color:var(--teal-ink);background:rgba(20,136,164,.12)} .sk.good{color:#1f8f5f;background:rgba(44,192,138,.14)}
@@ -101,7 +101,7 @@ a{color:inherit;text-decoration:none} b,strong{font-weight:800} img{max-width:10
 .reason{background:var(--bg)}
 .rcard{background:#fff;border:1px solid var(--line);border-radius:13px;padding:28px 24px;box-shadow:var(--shadow-sm)}
 .ric{width:56px;height:56px;display:grid;place-items:center;font-size:1.6rem;background:rgba(20,136,164,.10);border-radius:11px;margin-bottom:16px}
-.rcard h3{font-family:var(--round);font-weight:800;color:var(--navy);font-size:1.12rem;margin-bottom:10px}
+.rcard h3{font-family:var(--round);font-weight:700;color:var(--navy);font-size:1.12rem;margin-bottom:10px}
 .rcard p{color:var(--ink-2);font-size:.9rem}
 
 /* 5. カリキュラム */
@@ -109,7 +109,7 @@ a{color:inherit;text-decoration:none} b,strong{font-weight:800} img{max-width:10
 .cur{margin-top:44px}
 .ccard{background:#fff;border:1px solid var(--line);border-radius:13px;padding:26px 24px;box-shadow:var(--shadow-sm);position:relative}
 .cnum{position:absolute;right:20px;top:16px;font-weight:800;font-size:2.2rem;color:var(--bg)}
-.ccard h3{font-family:var(--round);font-weight:800;color:var(--navy);font-size:1.1rem;line-height:1.5;margin-bottom:10px;max-width:12em}
+.ccard h3{font-family:var(--round);font-weight:700;color:var(--navy);font-size:1.1rem;line-height:1.5;margin-bottom:10px;max-width:12em}
 .hot{display:inline-block;font-family:var(--round);font-size:.68rem;font-weight:800;color:#fff;background:var(--amber);padding:2px 9px;border-radius:100px;vertical-align:middle}
 .ccard p{color:var(--ink-2);font-size:.9rem;margin-bottom:14px}
 .chips{display:flex;gap:8px;flex-wrap:wrap}
@@ -153,7 +153,7 @@ a{color:inherit;text-decoration:none} b,strong{font-weight:800} img{max-width:10
 .subsidy .wrap{position:relative;z-index:2}
 .sub-grid{margin-top:46px;display:grid;grid-template-columns:1fr 1fr;gap:20px}
 .panel{background:#fff;border-radius:10px;padding:30px;box-shadow:var(--shadow)}
-.panel-t{font-weight:800;font-size:1.3rem;color:var(--navy)}
+.panel-t{font-weight:700;font-size:1.3rem;color:var(--navy)}
 .panel-s{color:var(--ink-3);font-size:.9rem;margin-top:4px;margin-bottom:20px}
 /* 診断 */
 .q{margin-bottom:16px} .q.hide{display:none}
@@ -199,14 +199,14 @@ a{color:inherit;text-decoration:none} b,strong{font-weight:800} img{max-width:10
 .flow-track{margin-top:46px;display:grid;grid-template-columns:repeat(5,1fr);gap:14px;position:relative}
 .fstep{background:#fff;border:1px solid var(--line);border-radius:9px;padding:24px 20px;box-shadow:var(--shadow-sm);text-align:center}
 .fnum{width:44px;height:44px;display:grid;place-items:center;margin:0 auto 14px;border-radius:50%;background:linear-gradient(135deg,var(--teal-2),var(--teal));color:#fff;font-weight:800;font-size:1.2rem}
-.fstep h3{font-family:var(--round);font-weight:800;color:var(--navy);font-size:1.02rem;margin-bottom:8px}
+.fstep h3{font-family:var(--round);font-weight:700;color:var(--navy);font-size:1.02rem;margin-bottom:8px}
 .fstep p{color:var(--ink-2);font-size:.84rem;line-height:1.7}
 
 /* 9. FAQ */
 .faq{background:linear-gradient(180deg,#fff,var(--bg))}
 .faq-list{margin-top:40px;max-width:820px;display:flex;flex-direction:column;gap:12px}
 .fq{background:#fff;border:1px solid var(--line);border-radius:11px;overflow:hidden;box-shadow:var(--shadow-sm)}
-.fq-q{width:100%;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 24px;background:none;border:0;cursor:pointer;font-family:var(--round);font-weight:800;color:var(--navy);font-size:1rem;text-align:left}
+.fq-q{width:100%;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 24px;background:none;border:0;cursor:pointer;font-family:var(--round);font-weight:700;color:var(--navy);font-size:1rem;text-align:left}
 .fq-q i{font-style:normal;font-size:1.4rem;color:var(--teal);transition:transform .3s;flex:0 0 auto}
 .fq.open .fq-q i{transform:rotate(45deg)}
 .fq-a{max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s;padding:0 24px;color:var(--ink-2);font-size:.92rem}
@@ -267,7 +267,7 @@ a{color:inherit;text-decoration:none} b,strong{font-weight:800} img{max-width:10
 .save{background:linear-gradient(180deg,#fff,var(--bg));border-bottom:1px solid var(--line);padding-block:clamp(56px,8vw,96px)}
 .save-head{margin-bottom:clamp(30px,4vw,48px)}
 .save-eyebrow{display:inline-block;font-weight:700;font-size:.86rem;letter-spacing:.06em;color:var(--teal);margin-bottom:12px}
-.save-h{font-family:var(--round);font-weight:800;font-size:clamp(1.7rem,4vw,2.75rem);line-height:1.42;color:var(--navy)}
+.save-h{font-family:var(--round);font-weight:700;font-size:clamp(1.7rem,4vw,2.75rem);line-height:1.42;color:var(--navy)}
 .save-in{display:grid;grid-template-columns:.92fr 1.08fr;gap:clamp(26px,4vw,52px);align-items:center;max-width:980px;margin-inline:auto}
 /* 割引カード（斜めリボン＋巨大グラデ75%OFF） */
 .save-card{position:relative;background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);padding:clamp(34px,4vw,48px) clamp(24px,3vw,40px);text-align:center;overflow:hidden}
@@ -296,7 +296,7 @@ a{color:inherit;text-decoration:none} b,strong{font-weight:800} img{max-width:10
 .ctbl-wrap{margin-top:44px;overflow-x:auto;-webkit-overflow-scrolling:touch}
 .ctbl{width:100%;border-collapse:separate;border-spacing:0;min-width:640px}
 .ctbl th,.ctbl td{padding:18px 20px;text-align:left;vertical-align:middle;border-bottom:1px solid var(--line)}
-.ctbl thead th{font-family:var(--round);font-weight:800;font-size:1.02rem;text-align:center;border-bottom:0;padding:20px}
+.ctbl thead th{font-family:var(--round);font-weight:700;font-size:1.02rem;text-align:center;border-bottom:0;padding:20px}
 .ctbl thead .corner{background:transparent}
 .ctbl thead .me{background:var(--teal);color:#fff;border-radius:12px 12px 0 0}
 .ctbl thead .other{background:#eef2f7;color:var(--ink-3);border-radius:12px 12px 0 0}
@@ -370,7 +370,7 @@ a{color:inherit;text-decoration:none} b,strong{font-weight:800} img{max-width:10
 .worry-list li::before{background:var(--amber);color:#3a2600}
 
 /* セクション見出しを少しだけ強く */
-.h2{font-weight:800}
+.h2{font-weight:700}
 
 /* ============================================================
    v5 色ブロックのリズム（asobu寄せ・見本）
@@ -402,7 +402,7 @@ a{color:inherit;text-decoration:none} b,strong{font-weight:800} img{max-width:10
 .rcard{padding:0;overflow:hidden}
 .rcard-img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block}
 .rcard-body{padding:22px 22px 24px}
-.rcard-body h3{font-family:var(--round);font-weight:800;color:var(--navy);font-size:1.12rem;margin-bottom:10px}
+.rcard-body h3{font-family:var(--round);font-weight:700;color:var(--navy);font-size:1.12rem;margin-bottom:10px}
 .rcard-body p{color:var(--ink-2);font-size:.9rem}
 
 /* ストーリー：写真つきシーン */
