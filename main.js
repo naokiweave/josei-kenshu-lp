@@ -53,6 +53,11 @@ const lanes=[[],[],[]];
 DATA.forEach((d,i)=>lanes[i%3].push(d));
 ['lane1','lane2','lane3'].forEach((id,idx)=>{const h=lanes[idx].map(card).join('');document.getElementById(id).innerHTML=h+h;});
 
+/* ============ ロゴ帯（仮プレースホルダ） ============ */
+const LOGO_PH = ['建設','製造','電気工事','障害福祉','食品','電気通信','アパレル','会計事務所','厨房設備','農業'];
+const ls = document.getElementById('logoStrip');
+if (ls) ls.innerHTML = LOGO_PH.map(x => `<span class="lgo"><i class="lgo-ph"></i>${x}</span>`).join('');
+
 /* ============ スクロールreveal ============ */
 const io = new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.14,rootMargin:'0px 0px -8% 0px'});
 document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%4*70)+'ms';io.observe(el);});

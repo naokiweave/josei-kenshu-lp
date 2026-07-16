@@ -22,10 +22,13 @@ fs.mkdirSync(OUT, { recursive: true });
   const toSel = (sel, wait, off=70) => page.evaluate(({sel,off})=>{const el=document.querySelector(sel);if(el)window.scrollTo({top:window.scrollY+el.getBoundingClientRect().top-off,behavior:'smooth'});},{sel,off}).then(()=>page.waitForTimeout(wait));
 
   await page.waitForTimeout(1600);                 // ヒーロー
-  await toSel('#prob', 2600);                      // 問題提起
-  await toSel('#story', 2800);                     // ストーリー
-  await toSel('#reason', 2600);                    // 選ばれる理由
-  await toSel('#curriculum', 2800);                // カリキュラム
+  await toSel('#stats', 2400, 30);                 // ロゴ帯＋円形実績バッジ
+  await toSel('#worry', 2600);                     // お悩みチェックリスト
+  await toSel('#prob', 2400);                      // 問題提起
+  await toSel('#story', 2600);                     // ストーリー
+  await toSel('#reason', 2400);                    // 選ばれる理由
+  await toSel('#compare', 2800, 40);               // 比較表
+  await toSel('#curriculum', 2600);                // カリキュラム
   await toSel('#voice', 1600);                     // 声：見出し
   await toY(0, 0); // noop keep
   await page.evaluate(()=>document.querySelector('#voice .feat').scrollIntoView({behavior:'smooth',block:'center'}));
