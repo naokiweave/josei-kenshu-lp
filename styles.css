@@ -21,8 +21,7 @@ a{color:inherit;text-decoration:none} b,strong{font-weight:800} img{max-width:10
 .reveal.in{opacity:1;transform:none}
 
 .section{padding-block:clamp(72px,10vw,128px)}
-.eyebrow{display:inline-flex;align-items:center;gap:.6em;font-family:var(--round);font-weight:700;font-size:.8rem;letter-spacing:.14em;color:var(--teal);background:none;padding:0;border-radius:0;margin-bottom:14px}
-.eyebrow::before{content:"";width:18px;height:1px;border-radius:0;background:currentColor;opacity:.75}
+.eyebrow{display:inline-block;font-family:var(--round);font-weight:700;font-size:.82rem;letter-spacing:.12em;color:var(--teal);background:none;padding:0;border-radius:0;margin-bottom:12px}
 .eyebrow.light{color:#7fd6ea;background:none}
 .h2{font-family:var(--round);font-weight:700;font-size:clamp(1.85rem,4.4vw,3.05rem);line-height:1.44;letter-spacing:.005em;color:var(--navy)}
 .h2.white{color:#fff} .mk{color:var(--teal)} .mk-amber{color:var(--amber)}
