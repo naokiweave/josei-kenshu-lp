@@ -586,3 +586,17 @@ body{color:var(--ink);background:var(--bg)}
 .tlogo b{font-family:var(--round);font-weight:700;font-size:.9rem;color:var(--ink);white-space:nowrap}
 .tools-note{margin-top:26px;color:var(--ink-3);font-size:.82rem}
 @media(max-width:600px){.tool-grid{gap:9px}.tlogo{padding:8px 12px}.tlogo b{font-size:.82rem}}
+
+/* カリキュラム：回ごとのアイコン */
+.cicon{width:54px;height:54px;border-radius:14px;display:grid;place-items:center;margin-bottom:14px;box-shadow:0 12px 24px -12px rgba(0,0,0,.4)}
+.cicon svg{width:28px;height:28px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ci-1{background:linear-gradient(135deg,#17A8C6,#1488A4)}
+.ci-2{background:linear-gradient(135deg,#8E7BF2,#6C5CE7)}
+.ci-3{background:linear-gradient(135deg,#F7B733,#F4761A)}
+.ci-4{background:linear-gradient(135deg,#38CE9A,#20A879)}
+.ci-5{background:linear-gradient(135deg,#FF83B2,#F65C97)}
+.ci-6{background:linear-gradient(135deg,#4A90D9,#3A6FC0)}
+.cmeta{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.cmeta b{font-family:var(--round);font-weight:800;font-size:.92rem;color:var(--teal-ink)}
+.cmeta span{font-family:var(--round);font-weight:800;font-size:.72rem;color:var(--ink-3);background:var(--bg);padding:3px 10px;border-radius:100px}
+.ccard h3{padding-right:0;margin-top:0}
