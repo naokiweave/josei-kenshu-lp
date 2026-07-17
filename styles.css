@@ -499,3 +499,39 @@ body{color:var(--ink);background:var(--bg)}
 
 /* ドット区切りを淡色に */
 .dots-div{background-image:radial-gradient(rgba(108,92,231,.22) 2.2px,transparent 2.2px)}
+
+/* ============================================================
+   v13 ストーリー漫画(2×2) & 選ばれる理由(asobu踏襲・ラーニングピラミッド)
+   ============================================================ */
+/* 漫画 2×2 */
+.manga-grid{margin-top:44px;display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.manga{position:relative;background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow-sm)}
+.manga img{width:100%;display:block}
+.mtag{position:absolute;top:14px;left:14px;z-index:2;font-family:var(--round);font-weight:800;font-size:.84rem;color:#fff;background:rgba(17,27,46,.82);padding:7px 15px;border-radius:100px;backdrop-filter:blur(4px)}
+@media(max-width:700px){.manga-grid{grid-template-columns:1fr;gap:16px}}
+
+/* 選ばれる理由：ポイント色ブロック（左右交互） */
+.reason{background:var(--bg)}
+.feat-list{margin-top:48px;display:flex;flex-direction:column;gap:24px;text-align:left}
+.feat{display:grid;grid-template-columns:1.02fr .98fr;gap:clamp(24px,4vw,52px);align-items:center;border-radius:22px;padding:clamp(28px,4vw,48px);color:#fff;box-shadow:var(--shadow)}
+.feat-teal{background:linear-gradient(135deg,#17A8C6,#0E7C96)}
+.feat-purple{background:linear-gradient(135deg,#7B6BF0,#5a49d4)}
+.feat.rev .feat-visual{order:-1}
+.feat-body .pt{display:inline-flex;flex-direction:column;align-items:center;justify-content:center;width:78px;height:78px;border-radius:50%;border:2px solid rgba(255,255,255,.55);margin-bottom:18px}
+.feat-body .pt i{font-style:normal;font-size:.58rem;font-weight:800;letter-spacing:.1em;color:var(--yellow)}
+.feat-body .pt b{font-family:var(--round);font-weight:800;font-size:1.8rem;line-height:1;color:#fff}
+.feat-body h3{font-family:var(--round);font-weight:800;font-size:clamp(1.3rem,2.6vw,1.72rem);line-height:1.42;margin-bottom:16px;color:#fff}
+.feat-body ul{list-style:none;display:flex;flex-direction:column;gap:11px}
+.feat-body li{position:relative;padding-left:22px;font-size:clamp(.95rem,1.6vw,1.02rem);line-height:1.72;color:rgba(255,255,255,.95)}
+.feat-body li::before{content:"";position:absolute;left:0;top:.62em;width:10px;height:10px;border-radius:50%;background:var(--yellow)}
+.feat-visual img{width:100%;border-radius:14px;display:block;box-shadow:0 22px 44px -22px rgba(0,0,0,.5)}
+@media(max-width:800px){.feat{grid-template-columns:1fr;gap:24px}.feat.rev .feat-visual{order:0}}
+
+/* ラーニングピラミッド */
+.pyramid{background:#fff;border-radius:16px;padding:22px 20px 18px;box-shadow:0 22px 44px -22px rgba(0,0,0,.5)}
+.pyr-cap{display:block;text-align:center;font-family:var(--round);font-weight:800;font-size:.92rem;color:var(--ink);margin-bottom:14px}
+.pyr-row{width:var(--w);min-width:34%;height:36px;margin:5px auto;border-radius:7px;background:var(--c);display:flex;align-items:center;justify-content:space-between;padding:0 13px;color:#fff}
+.pyr-row span{font-family:var(--round);font-weight:800;font-size:.82rem;white-space:nowrap}
+.pyr-row b{font-family:var(--round);font-weight:800;font-size:.9rem}
+.pyr-row.al{box-shadow:0 0 0 2px rgba(244,166,42,.55)}
+.pyr-note{display:block;text-align:center;font-size:.74rem;color:var(--ink-3);margin-top:12px;line-height:1.6}
