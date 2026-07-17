@@ -557,3 +557,10 @@ body{color:var(--ink);background:var(--bg)}
 .jp-pin::after{content:"";position:absolute;inset:4px;border-radius:50%;background:#fff}
 @keyframes jpp{0%,100%{box-shadow:0 0 0 4px rgba(244,166,42,.25),0 5px 12px -3px rgba(244,166,42,.8)}50%{box-shadow:0 0 0 8px rgba(244,166,42,.08),0 5px 12px -3px rgba(244,166,42,.8)}}
 .jp-label{position:absolute;left:50%;bottom:16px;transform:translateX(-50%);background:linear-gradient(120deg,var(--teal-2),var(--teal));color:#fff;font-family:var(--round);font-weight:800;font-size:.95rem;padding:9px 20px;border-radius:100px;box-shadow:0 12px 24px -10px rgba(20,136,164,.6);white-space:nowrap}
+
+/* 選ばれる理由：ビジュアルを全ポイント同サイズ(4:3)に統一 */
+.fv-box{width:100%;aspect-ratio:4/3;border-radius:14px;overflow:hidden;box-shadow:0 22px 44px -22px rgba(0,0,0,.5)}
+.fv-box.fv-white{background:#fff}
+.fv-box img{width:100%;height:100%;display:block;border-radius:0;box-shadow:none}
+.fv-cover{object-fit:cover}
+.fv-contain{object-fit:contain;padding:16px}
